@@ -17,6 +17,7 @@ const State = () => {
     // Will only re-render when counter changes
     return (
         <div>
+            <h1>State</h1>
             <p>Counter: {counter}</p>
             <button onClick={handleCounterClick}>Increment</button>
             <p>Name: {name}</p>
