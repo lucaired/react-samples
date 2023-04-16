@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom/client';
+import { UserProvider } from './UserContext';
+
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
@@ -12,7 +14,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <App />
+        <Fragment />
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
