@@ -1,13 +1,17 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Effect from './Effect';
+import Home from './Home';
 import State from './State';
+import Effect from './Effect';
 
 function App() {
   return (
-    <div>
-      <State/>
-      <Effect/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="state" element={<State/>}/>
+      <Route path="effect" element={<Effect/>}/>
+      <Route path="/*" element={<Home/>}/>
+    </Routes>
   );
 }
 
